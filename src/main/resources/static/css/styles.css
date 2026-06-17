@@ -1,0 +1,64 @@
+h1 {
+  color: blueviolet;
+}
+
+#Heading-1 {
+  color: rgb(155, 124, 22);
+}
+
+.heading {
+  color: rgb(155, 57, 22);
+}
+
+#para {
+  border: 2px solid rgb(128, 40, 40);
+  padding: 30px;
+}
+
+#navbar {
+  border: 3px solid black;
+  padding: 15px;
+  background-color: rgb(40, 158, 19);
+  text-align: center;
+}
+
+#navbar a {
+  text-decoration: none;
+  padding: 15px;
+  color: white;
+}
+
+#navbar a:hover {
+  background-color: rgb(92, 201, 73);
+  color: rgb(21, 94, 11);
+}
+
+body {
+  margin: 0px;
+}
+
+.card {
+  border: 2px solid black;
+  width: 300px;
+  margin-top: 100px;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.card img {
+  width: 300px;
+}
+
+.card button {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  background-color: rgb(40, 158, 19);
+  color: white;
+  border: none;
+}
