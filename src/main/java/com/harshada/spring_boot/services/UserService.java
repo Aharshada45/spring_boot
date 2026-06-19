@@ -61,24 +61,29 @@ public class UserService {
     // }
 
     public User updateUser(int id, User updatedUser) {
-    User existingUser = getUserById(id);
-
-    if (existingUser == null) {
-        return null;
+        User existingUser = getUserById(id);
+        if (existingUser == null) {
+            return null;
+        }
+        if (updatedUser.getName() != null) {
+            existingUser.setName(updatedUser.getName());
+        }
+        if (updatedUser.getGender() != null) {
+            existingUser.setGender(updatedUser.getGender());
+        }
+        if (updatedUser.getImage() != null) {
+            existingUser.setImage(updatedUser.getImage());
+        }
+        return existingUser;
     }
 
-    if (updatedUser.getName() != null) {
-        existingUser.setName(updatedUser.getName());
+    public boolean deleteUser(int id) {
+        for (int i = 0; i < allUsers.size(); i++) {
+            if (allUsers.get(i).getId() == id) {
+                allUsers.remove(i);
+                return true;
+            }
+        }
+        return false;
     }
-
-    if (updatedUser.getGender() != null) {
-        existingUser.setGender(updatedUser.getGender());
-    }
-
-    if (updatedUser.getImage() != null) {
-        existingUser.setImage(updatedUser.getImage());
-    }
-
-    return existingUser;
-}
 }
